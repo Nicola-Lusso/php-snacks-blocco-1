@@ -19,6 +19,15 @@ $mail = $_GET['mail'];
     <title></title>
   </head>
   <body>
+  <?php  $messaggio = '';
+  if ((strpos($mail, '@')) && (strpos($mail,'.')) &&) {
+    $messaggio = 'Accesso Riuscito!';
+  } else {
+    $messaggio = "Accesso Negato!";
+  }
+  ​
+  echo $messaggio;
+  ?>
 
   </body>
 </html>
