@@ -11,6 +11,12 @@ $age = $_GET['age'];
 $mail = $_GET['mail'];
 
  ?>
+ <?php  $messaggio = '';
+ if ((strpos($mail, '@')) && (strpos($mail,'.')) && (strlen($name) >= 3 ) && (is_int($age))) {
+   $messaggio = 'Accesso Riuscito!';
+ } else {
+   $messaggio = "Accesso Negato!";
+ }?>​
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -19,14 +25,6 @@ $mail = $_GET['mail'];
     <title></title>
   </head>
   <body>
-  <?php  $messaggio = '';
-  if ((strpos($mail, '@')) && (strpos($mail,'.')) && (strlen($name) >= 3 ) && (is_int($age))) {
-    $messaggio = 'Accesso Riuscito!';
-  } else {
-    $messaggio = "Accesso Negato!";
-  }
-  ?>
-  ​
   <p><?php echo $messaggio ?></p>
 
   </body>
