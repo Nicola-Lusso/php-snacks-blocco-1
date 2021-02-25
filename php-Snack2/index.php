@@ -6,18 +6,17 @@
 <!-- DICHIARAZIONE VARIABILI -->
 <?php
 
+$mail = $_GET['mail'];
 $name = $_GET['name'];
 $age = $_GET['age'];
-$mail = $_GET['mail'];
 
  ?>
  <?php  $messaggio = '';
- if ((strpos($mail, '@')) && (strpos($mail,'.')) && (strlen($name) >= 3 ) && (is_int($age))) {
+ if ((strpos($mail, '@')) && (strpos($mail,'.')) && (strlen($name) >= 3 ) && (is_numeric($age))) {
    $messaggio = 'Accesso Riuscito!';
  } else {
    $messaggio = "Accesso Negato!";
  }?>​
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
