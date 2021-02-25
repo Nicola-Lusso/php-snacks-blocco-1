@@ -20,14 +20,14 @@ $mail = $_GET['mail'];
   </head>
   <body>
   <?php  $messaggio = '';
-  if ((strpos($mail, '@')) && (strpos($mail,'.')) &&) {
+  if ((strpos($mail, '@')) && (strpos($mail,'.')) && (strlen($name >= 3)) && (is_int($age))) {
     $messaggio = 'Accesso Riuscito!';
   } else {
     $messaggio = "Accesso Negato!";
   }
-  ​
-  echo $messaggio;
   ?>
+  ​
+  <p><?php echo $messaggio ?></p>
 
   </body>
 </html>
